@@ -5,7 +5,10 @@
   "repository": "https://github.com/TheMisfit68/language-xst.git",
   "license": "MIT",
   "keywords": [
-    "language"
+    "language",
+    "xst",
+    "Schneider",
+    "Unity"
   ],
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -1,0 +1,25 @@
+'name': 'XST'
+'fileTypes': ['xst']
+
+'scopeName': 'source.xst'
+'patterns': [
+
+    {
+      # Parse the XML
+      'begin': '<STExchangeFile>'
+      'end': '</STExchangeFile>'
+      'patterns': [
+          {'include': 'source.xml'}
+
+          {
+            # Parse the embedded PLC-code seperatly
+            'begin': '<STSource>'
+            'end': '</STSource>'
+            'patterns': [
+                {'include': 'source.st'}
+            ]
+          }
+      ]
+    }
+
+  ]

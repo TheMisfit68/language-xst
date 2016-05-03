@@ -1,0 +1,98 @@
+'scopeName': 'source.st'
+'patterns': [
+
+#Comments
+
+    #Blocks
+   {
+    'begin': '\\(\\*'
+    'end': '\\*\\)'
+    'name': 'comment.block.character.st'
+   }
+
+
+#Operators
+    {
+      'match': '(?i)\\b(AND|OR|NOT)\\b'
+      'name': 'keyword.operator.boolean.st'
+    }
+
+    {
+      'match': '([^\\s;].+)(:=)'
+      'captures':
+        '1':
+            'name': 'variable.assigned.st'
+        '2':
+            'name': 'keyword.operator.assignment'
+    }
+
+    {
+      'begin': '(RE)?SET\\s?\\('
+      'end': '\\)'
+      'name': 'keyword.operator.assignment.st'
+      'contentName': 'variable.assigned.st'
+    }
+
+      {
+        'match': '&(l|g)t;'
+        'name': 'keyword.operator.comparison.st'
+      }
+
+# Constants
+#Booleans
+    {
+      'match': '(?i)\\b(TRUE|FALSE)\\b'
+      'name': 'constant.boolean.st'
+    }
+# Int en floats
+   {
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.st'
+    }
+# Characters
+   {
+    'match': ';'
+    'name': 'constant.character.semicolon.st'
+    }
+
+
+
+#Variables
+#Inputs, Outputs, Merkers
+    {
+      'match': '(?i)% ?(I|Q|M)W? ?(\\d\\.?:?)+(MOD.ERR)?'
+      'name': 'variable.address.st'
+    }
+#Tagnames
+    {
+      'match': '(?i)\\b\\D{,3}(_|-|\\s)?\\d{4,5}'
+      'name': 'variable.tagname.st'
+    }
+
+#System Variables
+  {
+    'match': '(?i)%S\\d+'
+    'name': 'variable.system.st'
+  }
+
+
+
+#Functions and keywords
+#Flow control
+   {
+      'match': '(?i)\\b(if|then|elsif|else|end_if)\\b'
+      'name': 'keyword.control.st'
+    }
+
+#Inline
+  {
+    'begin': '(?i)\\b(RE|FE|DEC_INT|TON|TOFF)\\s?\\('
+    'end':  '\\)'
+    'name': 'keyword.inline.st'
+  }
+
+
+
+
+
+]

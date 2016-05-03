@@ -1,14 +1,13 @@
 {
   "name": "language-xst",
-  "main": "./lib/my-package",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "author": {
+    "name": "Jan Verrept"
+  },
+  "description": "XST language support in Atom",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "my-package:toggle"
-  },
-  "repository": "https://github.com/atom/my-package",
+  "repository": "https://github.com/TheMisfit68/language-xst.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

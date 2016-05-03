@@ -4,6 +4,9 @@
   "description": "XST language support in Atom",
   "repository": "https://github.com/TheMisfit68/language-xst.git",
   "license": "MIT",
+  "keywords": [
+    "language"
+  ],
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },

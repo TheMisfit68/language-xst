@@ -1,10 +1,9 @@
 {
   "name": "language-xst",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "XST language support in Atom",
   "repository": "https://github.com/TheMisfit68/language-xst.git",
   "license": "MIT",
-
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },

@@ -2,7 +2,7 @@
   "name": "language-xst",
   "version": "0.3.3",
   "description": "XST language support in Atom",
-  "repository": "https://github.com/TheMisfit68/language-xst.git",
+  "repository": "https://github.com/JBCoolTools/language-xst.git",
   "license": "MIT",
   "keywords": [
     "language",

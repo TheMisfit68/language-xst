@@ -1,6 +1,6 @@
 {
   "name": "language-xst",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "XST language support in Atom",
   "repository": "https://github.com/JBCoolTools/language-xst.git",
   "license": "MIT",

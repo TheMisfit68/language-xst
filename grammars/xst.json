@@ -1,0 +1,27 @@
+{
+  "name": "XST",
+  "fileTypes": [
+    "xst"
+  ],
+  "scopeName": "source.xst",
+  "patterns": [
+    {
+      "begin": "<STExchangeFile>",
+      "end": "</STExchangeFile>",
+      "patterns": [
+        {
+          "include": "source.xml"
+        },
+        {
+          "begin": "<STSource>",
+          "end": "</STSource>",
+          "patterns": [
+            {
+              "include": "source.st"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

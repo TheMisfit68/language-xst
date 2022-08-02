@@ -1,0 +1,10 @@
+{
+  "scopeName": "source.xml",
+  "patterns": [
+    {
+      "begin": "<comment>",
+      "end": "</comment>",
+      "name": "comment.block.xml"
+    }
+  ]
+}

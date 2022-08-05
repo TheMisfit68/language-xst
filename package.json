@@ -1,17 +1,42 @@
 {
-  "name": "language-xst",
-  "version": "0.5.0",
-  "description": "XST language support in Atom",
-  "repository": "https://github.com/JBCoolTools/language-xst.git",
-  "license": "MIT",
-  "keywords": [
-    "language",
-    "xst",
-    "Schneider",
-    "Unity"
-  ],
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {}
+    "name": "xst",
+    "displayName": "xst",
+    "description": "Schneider Unity XST",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "xst",
+                "aliases": [
+                    "Schneider Unity XST",
+                    "xst"
+                ],
+                "extensions": [
+                    ".xst"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "xst",
+                "scopeName": "source.xst",
+                "path": "./syntaxes/xst.tmLanguage.json"
+            },
+            {
+                "scopeName": "source.xml",
+                "path": "./syntaxes/xml.tmLanguage.json"
+            },
+            {
+                "scopeName": "source.st",
+                "path": "./syntaxes/st.tmLanguage.json"
+            }
+        ]
+    }
 }

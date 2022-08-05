@@ -1,0 +1,115 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Schneider Unity ST",
+    "scopeName": "source.st",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#constants"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "match": "^\\(\\*.*\\*\\)$",
+                    "name": "comment.line.character.st"
+                },
+                {
+                    "begin": "\\(\\*",
+                    "end": "\\*\\)",
+                    "name": "comment.block.st"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "(?i)\b(if|then|elsif|else|end_if)\b",
+                    "name": "keyword.control.st"
+                },
+                {
+                    "match": "(?i)\b(AND|OR|NOT)\b",
+                    "name": "keyword.operator.boolean.st"
+                },
+                {
+                    "begin": "(?i)\b(RE|FE|DEC_INT|TON|TOFF)\\s?\\(",
+                    "end": "\\)",
+                    "name": "keyword.operator.inline.st"
+                },
+                {
+                    "match": "([^\\s;]+)(:=)",
+                    "captures": {
+                        "1": {
+                            "name": "variable.other.assigned.st"
+                        },
+                        "2": {
+                            "name": "keyword.operator.assignment.st"
+                        }
+                    }
+                },
+                {
+                    "begin": "(RE)?SET\\s?\\(",
+                    "end": "\\)",
+                    "name": "keyword.operator.assignment.st",
+                    "contentName": "variable.other.assigned.st"
+                },
+                {
+                    "match": "&(l|g)t;",
+                    "name": "keyword.operator.comparison.st"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "match": "(?i)% ?(I|Q|M)W? ?(\\d\\.?:?)+(MOD.ERR)?",
+                    "name": "variable.other.address.st"
+                },
+                {
+                    "match": "(?i)\b\\D{,3}(_|-|\\s)?\\d{4,5}",
+                    "name": "variable.other.tagname.st"
+                },
+                {
+                    "match": "(?i)%S\\d+",
+                    "name": "variable.language.system.st"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "match": "(?i)\b(TRUE|FALSE)\b",
+                    "name": "constant.language.st"
+                },
+                {
+                    "match": "\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\b",
+                    "name": "constant.numeric.st"
+                },
+                {
+                    "match": ";",
+                    "name": "constant.character.semicolon.st"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.st",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.st",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    }
+}

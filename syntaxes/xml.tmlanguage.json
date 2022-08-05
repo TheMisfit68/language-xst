@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Schneider Unity xml",
+    "scopeName": "source.xml",
+    "patterns": [
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "begin": "<comment>",
+            "end": "</comment>",
+            "name": "comment.block.xml"
+        }
+    }
+}

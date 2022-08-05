@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Schneider Unity XST",
+    "scopeName": "source.xst",
+    "patterns": [
+        {
+            "include": "source.xml"
+        },
+        {
+            "include": "source.st"
+        }
+    ],
+    "repository": {
+        "xml": {
+            "begin": "<STExchangeFile>",
+            "end": "</STExchangeFile>",
+            "contentName": "source.xml",
+            "patterns": [
+                {
+                    "include": "#st"
+                }
+            ]
+        },
+        "st": {
+            "begin": "<STSource>",
+            "end": "</STSource>",
+            "contentName": "source.st"
+        }
+    }
+}

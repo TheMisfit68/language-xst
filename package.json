@@ -3,13 +3,19 @@
     "publisher": "TheMisfit68",
     "name": "xst",
     "displayName": "xst",
-    "description": "Schneider Unity XST",
-    "version": "0.0.1",
+    "icon": "images/icon.png",
+    "description": "Syntax Coloring for Schneider Unity XST",
+    "version": "1.0.1",
     "engines": {
         "vscode": "^1.69.0"
     },
     "categories": [
         "Programming Languages"
+    ],
+    "keywords": [
+        "Programming Languages",
+        "Schneider Unity",
+        "xst"
     ],
     "contributes": {
         "languages": [

@@ -1,5 +1,6 @@
 {
     "repository": "https://github.com/TheMisfit68/language-xst.git",
+    "publisher": "TheMisfit68",
     "name": "xst",
     "displayName": "xst",
     "description": "Schneider Unity XST",

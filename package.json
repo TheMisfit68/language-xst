@@ -1,12 +1,12 @@
 {
+    "publisher": "TheMisfit68",
     "repository": {
         "type": "git",
         "url": "https://github.com/TheMisfit68/language-xst.git"
       },
-    "publisher": "TheMisfit68",
+    "icon": "images/icon.png",
     "name": "xst",
     "displayName": "xst",
-    "icon": "images/icon.png",
     "description": "Syntax Coloring for Schneider Unity XST",
     "version": "1.0.1",
     "engines": {
